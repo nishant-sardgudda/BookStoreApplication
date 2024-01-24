@@ -1,0 +1,23 @@
+<nav class="bg-indigo-500 p-5 flex items-center justify-between">
+    <div class="logo">
+        <span class="justify-start text-gray-200 items-center flex text-4xl">Book Stories</span>
+    </div>
+    <div class="search relative" *ngIf = "isLoggedIn">
+        <span class="absolute mt-2 mx-3"><i class="fa fa-search font-light" aria-hidden="true"></i></span>
+        <input type="text" placeholder="Search book"
+        class="w-96 p-2 pl-9 rounded rounded-r-none text-gray-600">
+        <button class="rounded-r bg-slate-400 text-white p-2 outline-none outline-0">Search</button>
+    </div>
+    <div class="nav-items">
+        <ng-container *ngIf = "!isLoggedIn">
+            <span [routerLink] = "['/login']" class="text-gray-200 font-bold m-3 cursor-pointer hover:underline hover:text-indigo-200">Login</span>
+            <span [routerLink] = "['/register']" class="text-gray-200 font-bold m-3 cursor-pointer hover:underline hover:text-indigo-200">Register</span>
+        </ng-container>
+        <ng-container *ngIf = "isLoggedIn">
+            <span [routerLink] = "['/register']" class="text-gray-200 font-bold m-3 cursor-pointer hover:underline hover:text-indigo-200">Cart</span>
+            <span [routerLink] = "['/register']" class="text-gray-200 font-bold m-3 cursor-pointer hover:underline hover:text-indigo-200">Welcome User</span>
+            <span [routerLink] = "['/login']" (click) = "logout()" class="text-gray-200 font-bold m-3 cursor-pointer hover:underline hover:text-indigo-200">Logout</span>
+        </ng-container>
+        
+    </div>
+</nav>
