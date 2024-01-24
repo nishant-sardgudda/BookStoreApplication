@@ -52,12 +52,12 @@ export class ResetComponent implements OnInit{
         this.router.navigate(['login']);
         console.log("Reset Password Response: " + response);
         let obj = {
-          email : response.data.email,
+          email : response.description,
           message : "Reset-Password"
         }
         this.authService.successEmailService(obj).subscribe({
           next:(res)=>{
-            console.log('Register Email sent successfully!');
+            console.log('Reset Password Email sent successfully!');
           },
           error :(err)=>{
             console.log('Email error: ' + err);

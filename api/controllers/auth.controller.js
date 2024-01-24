@@ -167,7 +167,7 @@ export const resetPassword = (req, res, next)=>{
                         {$set : user},
                         {new : true}
                     );
-                    return next(createSuccess(200, 'Password Reset Successfully!'));
+                    return next(createSuccess(200, 'Password Reset Successfully!', response.email));
                 }
             } catch (error) {
                 return next(createError(500, 'Something went wrong while resetting password!'));
@@ -249,7 +249,7 @@ export const successEmail = async(req, res, next)=>{
                     console.log(err);
                     return next(createError(500, "Something went wrong while sending sucess password reset email!"));
                 }else{
-                    return next(createSuccess(200, "Reset password sucess mail sent successfully!", email));
+                    return next(createSuccess(200, "Reset password success mail sent successfully!", email));
                 }
             })
         }
