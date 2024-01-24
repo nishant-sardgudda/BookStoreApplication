@@ -105,12 +105,12 @@ export const sendEmail = async(req, res, next) =>{
         const emailTransorter = nodemailer.createTransport({
             service : "gmail",
             auth : {
-                user : "snishant123456@gmail.com",
-                pass : "ccmeplcsyzopvynq"
+                user : "Add Email ID",
+                pass : "Add App Password"
             }
         });
         let emailDetails = {
-            from : "snishant123456@gmail.com",
+            from : "Add Email ID",
             to : email,
             subject : "Reset Password",
             html : `
@@ -188,14 +188,14 @@ export const successEmail = async(req, res, next)=>{
         const emailTransorter = nodemailer.createTransport({
             service : "gmail",
             auth : {
-                user : "snishant123456@gmail.com",
-                pass : "ccmeplcsyzopvynq"
+                user : "Add Email ID",
+                pass : "Add App Password"
             }
         });
         
         if(value === 'Register'){
             const emailDetails = {
-                from : "snishant123456@gmail.com",
+                from : "Add Email ID",
                 to : email,
                 subject : "Registeration Successful",
                 html : `
@@ -225,7 +225,7 @@ export const successEmail = async(req, res, next)=>{
         }
         else if(value === 'Reset-Password'){
             const emailDetails = {
-                from : "snishant123456@gmail.com",
+                from : "Add Email ID",
                 to : email,
                 subject : "Password Reset Successful",
                 html : `
