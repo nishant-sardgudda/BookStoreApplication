@@ -1,0 +1,35 @@
+.card {
+    width: 1300px;
+    margin: 0 auto;
+}
+
+.card-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding: 50px 0;
+}
+
+.card-item {
+    -ms-flex-preferred-size: calc(33.33333% - 30px);
+    flex-basis: calc(33.33333% - 150px);
+    margin: 0 15px 30px;
+    overflow: hidden;
+    border-radius: 40px;
+}
+
+.image-container {
+    height: 200px; /* Set the desired height for the container */
+    overflow: hidden; /* Ensure that any overflow is hidden */
+}
+  
+img {
+    width: 50%; /* Take up 50% of the width within the container */
+    height: 100%; /* Take up 100% of the height within the container */
+    object-fit: cover; /* This property ensures the image covers the container while maintaining its aspect ratio */
+}

@@ -10,13 +10,13 @@
     </div>
     <div class="nav-items">
         <ng-container *ngIf = "!isLoggedIn">
-            <span [routerLink] = "['/login']" class="text-gray-200 font-bold m-3 cursor-pointer hover:underline hover:text-indigo-200">Login</span>
+            <span [routerLink] = "['/']" class="text-gray-200 font-bold m-3 cursor-pointer hover:underline hover:text-indigo-200">Login</span>
             <span [routerLink] = "['/register']" class="text-gray-200 font-bold m-3 cursor-pointer hover:underline hover:text-indigo-200">Register</span>
         </ng-container>
         <ng-container *ngIf = "isLoggedIn">
             <span [routerLink] = "['/register']" class="text-gray-200 font-bold m-3 cursor-pointer hover:underline hover:text-indigo-200">Cart</span>
-            <span [routerLink] = "['/register']" class="text-gray-200 font-bold m-3 cursor-pointer hover:underline hover:text-indigo-200">Welcome User</span>
-            <span [routerLink] = "['/login']" (click) = "logout()" class="text-gray-200 font-bold m-3 cursor-pointer hover:underline hover:text-indigo-200">Logout</span>
+            <!--<span [routerLink] = "['/register']" class="text-gray-200 font-bold m-3 cursor-pointer hover:underline hover:text-indigo-200">Welcome User</span>-->
+            <span [routerLink] = "['/']" (click) = "logout()" class="text-gray-200 font-bold m-3 cursor-pointer hover:underline hover:text-indigo-200">Logout</span>
         </ng-container>
         
     </div>
