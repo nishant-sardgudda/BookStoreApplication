@@ -14,8 +14,8 @@
             <span [routerLink] = "['/register']" class="text-gray-200 font-bold m-3 cursor-pointer hover:underline hover:text-indigo-200">Register</span>
         </ng-container>
         <ng-container *ngIf = "isLoggedIn">
-            <span [routerLink] = "['/register']" class="text-gray-200 font-bold m-3 cursor-pointer hover:underline hover:text-indigo-200">Cart</span>
-            <!--<span [routerLink] = "['/register']" class="text-gray-200 font-bold m-3 cursor-pointer hover:underline hover:text-indigo-200">Welcome User</span>-->
+            <button [routerLink] = "['/cart']" class="text-gray-200 font-bold cursor-pointer hover:underline hover:text-indigo-200">Cart</button>
+            <span class="text-red-700 font-bold ml-1 mr-3 hover:text-indigo-200">{{cartItems}}</span>
             <span [routerLink] = "['/']" (click) = "logout()" class="text-gray-200 font-bold m-3 cursor-pointer hover:underline hover:text-indigo-200">Logout</span>
         </ng-container>
         

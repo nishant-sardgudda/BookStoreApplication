@@ -1,7 +1,8 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit, inject } from '@angular/core';
+import { Component, Input, OnInit, inject } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { AuthServiceService } from '../../services/auth-service.service';
+import { CartService } from '../../services/cart.service';
 
 @Component({
   selector: 'app-header',
@@ -13,19 +14,23 @@ import { AuthServiceService } from '../../services/auth-service.service';
 export class HeaderComponent implements OnInit{
   
   authservice = inject(AuthServiceService);
+  cartService = inject(CartService);
   //isLoggedIn : boolean = this.authservice.isLoggedIn();
   isLoggedIn : boolean = false;
+  cartItems = 0;
+ 
 
   ngOnInit(): void {
-    
-    // let loggedIn = localStorage.getItem("user_id");
-    // console.log("loggedIn value: " + loggedIn);
-    // if(loggedIn){
-    //   this.isLoggedIn = true;
-    // }
     this.authservice.isLoggedIn$.subscribe(res=>{
       this.isLoggedIn = this.authservice.isLoggedIn();
     })
+    this.cartService.getProducts().subscribe(item =>{
+      this.cartItems = item.length;
+    })
+  }
+
+  onAddToCart(value : boolean){
+    console.log("Boolean value: "+ value);
     
   }
 

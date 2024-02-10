@@ -6,10 +6,10 @@
             </div>
             <div class="p-2">
                 <span class="flex justify-center font-bold text-xl">Angular</span>
-                <span class="flex justify-center font-bold text-sm">USD 30</span>
+                <span class="flex justify-center font-bold text-sm" #cost>USD 30</span>
             </div>
             <div class="p-2 flex justify-center">
-                <button class="bg-indigo-400 rounded text-white font-semibold w-auto p-2 mr-4 text-sm">Add to Cart</button>
+                <button class="bg-indigo-400 rounded text-white font-semibold w-auto p-2 mr-4 text-sm" (click) = "addToCart('Angular')">Add to Cart</button>
                 <button class="bg-indigo-400 rounded text-white font-semibold w-auto p-2 text-sm">Buy Now</button>
             </div>
         </div>
@@ -19,10 +19,10 @@
             </div>
             <div class="p-2">
                 <span class="flex justify-center font-bold text-xl">Node JS</span>
-                <span class="flex justify-center font-bold text-sm">USD 20</span>
+                <span class="flex justify-center font-bold text-sm" id="cost">USD 20</span>
             </div>
             <div class="p-2 flex justify-center">
-                <button class="bg-indigo-400 rounded text-white font-semibold w-auto p-2 mr-4 text-sm">Add to Cart</button>
+                <button class="bg-indigo-400 rounded text-white font-semibold w-auto p-2 mr-4 text-sm" (click) = "addToCart('Node')">Add to Cart</button>
                 <button class="bg-indigo-400 rounded text-white font-semibold w-auto p-2 text-sm">Buy Now</button>
             </div>
         </div>
@@ -32,10 +32,10 @@
             </div>
             <div class="p-2">
                 <span class="flex justify-center font-bold text-xl">React JS</span>
-                <span class="flex justify-center font-bold text-sm">USD 40</span>
+                <span class="flex justify-center font-bold text-sm" id="cost">USD 40</span>
             </div>
             <div class="p-2 flex justify-center">
-                <button class="bg-indigo-400 rounded text-white font-semibold w-auto p-2 mr-4 text-sm">Add to Cart</button>
+                <button class="bg-indigo-400 rounded text-white font-semibold w-auto p-2 mr-4 text-sm" (click) = "addToCart('React')">Add to Cart</button>
                 <button class="bg-indigo-400 rounded text-white font-semibold w-auto p-2 text-sm">Buy Now</button>
             </div>
         </div>
@@ -45,11 +45,11 @@
             </div>
             <div class="p-2">
                 <span class="flex justify-center font-bold text-xl">Express JS</span>
-                <span class="flex justify-center font-bold text-sm">USD 35</span>
+                <span class="flex justify-center font-bold text-sm" id="cost">USD 35</span>
             </div>
             <div class="p-2 flex justify-center">
-                <button class="bg-indigo-400 rounded text-white font-semibold w-auto p-2 ml-4 mr-4 text-sm">Add to Cart</button>
-                <button class="bg-indigo-400 rounded text-white font-semibold w-auto p-2 text-sm">Buy Now</button>
+                <button class="bg-indigo-400 rounded text-white font-semibold w-auto p-2 mx-auto text-sm">Add to Cart</button>
+                <!--<button class="bg-indigo-400 rounded text-white font-semibold w-auto p-2 text-sm">Buy Now</button>-->
             </div>
         </div>
         <div class="card-item shadow-2xl">
@@ -58,7 +58,7 @@
             </div>
             <div class="p-2">
                 <span class="flex justify-center font-bold text-xl">Next JS</span>
-                <span class="flex justify-center font-bold text-sm">USD 50</span>
+                <span class="flex justify-center font-bold text-sm" id="cost">USD 50</span>
             </div>
             <div class="p-2 flex justify-center">
                 <button class="bg-indigo-400 rounded text-white font-semibold w-auto p-2 mr-4 text-sm">Add to Cart</button>
@@ -71,11 +71,11 @@
             </div>
             <div class="p-2">
                 <span class="flex justify-center font-bold text-xl">Vue JS</span>
-                <span class="flex justify-center font-bold text-sm">USD 50</span>
+                <span class="flex justify-center font-bold text-sm" id="cost">USD 55</span>
             </div>
             <div class="p-2 flex justify-center">
                 <button class="bg-indigo-400 rounded text-white font-semibold w-auto p-2 mr-4 text-sm">Add to Cart</button>
-                <button class="bg-indigo-400 rounded text-white font-semibold w-auto p-2 text-sm">Buy Now</button>
+                <!--<button class="bg-indigo-400 rounded text-white font-semibold w-auto p-2 text-sm">Buy Now</button>-->
             </div>
         </div>
     </div>

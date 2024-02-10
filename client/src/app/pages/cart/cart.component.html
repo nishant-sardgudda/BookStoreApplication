@@ -1,0 +1,46 @@
+<ng-container *ngIf = "!isCartEmpty">
+    <div class="container text-justify justify-center mt-4">
+        <div class="card-table">
+            <div class="cart-product">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Sr. No</th>
+                            <th>Image</th>
+                            <th>Title</th>
+                            <th>Quantity</th>
+                            <th>Total</th>
+                        </tr>    
+                    </thead>
+                    <tbody>
+                        <tr *ngFor = 'let item of products; let i = index'>
+                            <td>{{i + 1}}</td>
+                            <td><img src = "{{item.img}}" alt="Angular Book"></td>
+                            <td>{{item.title}}</td>
+                            <td>1</td>
+                            <td>{{item.price}}</td>
+                            <td>
+                                <button class="btn" (click) = "removeFromCart(item)"><i class="fa fa-trash" aria-hidden="true"></i></button>
+                            </td>
+                        </tr>
+                    </tbody>
+                    
+                </table>
+            </div>
+        </div>
+        
+    </div>
+</ng-container>
+<ng-container *ngIf = "isCartEmpty">
+    <div class="container">
+        <div class="card">
+            <h5 class="card-title">My Cart</h5>
+        </div>
+        <div class="lg:w-4/12 p-10 center shadow-2xl">
+            <img src="" alt="">
+            <h3 class="font-extrabold mb-2">Yout Cart is Empty!</h3>
+            <h6 class="mb-2">Add items to it now</h6>
+            <button [routerLink] = "['/home']" class="bg-indigo-400 rounded text-white font-semibold p-2">Shop Now</button>
+        </div>
+    </div>
+</ng-container>
